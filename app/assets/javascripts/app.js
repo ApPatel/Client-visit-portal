@@ -28,16 +28,18 @@ $(function(){
 
 $(function() {
 
-    $( "#Date" ).datepicker({
+    $( "#visit_time" ).datepicker({
         showOn: "button",
         buttonImage: "/assets/calendar_icon.jpg",
         buttonImageOnly: true,
         changeMonth: true,
         changeYear: true,
         numberOfMonths: 1,
+        showAnim: 'slideDown',
         dateFormat: $.datepicker.ISO_8601,
         onSelect: function( selectedDate ) {
             $( "#to1" ).datepicker( "option", "minDate", selectedDate );
         }
     });
+
 })

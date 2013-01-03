@@ -2,24 +2,36 @@
 
 <p>
 
-  <b>Agenda:</b>
-  <%= @visit.Agenda %>
-</p>
 
-<p>
-  <b>Description:</b>
-  <%= @visit.Description %>
-</p>
 
-<p>
-  <b>Time:</b>
-  <%= @visit.time %>
-</p>
 
-<p>
-  <b>Customers:</b>
-  <%= @visit.customers %>
-</p>
+
+
+<div style="min-width: 960px; overflow:auto;">
+    <table  id="show_table" >
+      <thead>
+        <tr>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px"><b>Agenda </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><b>Description </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><b>Time </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 70px "><b>Customers </b></td>
+        </tr>
+      </thead>
+
+        <tr>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px"><%= @visit.Agenda %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><%= @visit.Description %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><%= @visit.time %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 70px "><%= @visit.customers %></td>
+        </tr>
+    </table>
+  </div>
+
+
+
+
+  <div style=" min-height: 50px">
+  </div>
 
 
 <%= link_to 'Edit', edit_visit_path(@visit) %> |

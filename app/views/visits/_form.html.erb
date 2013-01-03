@@ -11,27 +11,33 @@
     </div>
   <% end %>
 
+<div style="height: 50px">
+</div>
+
   <div class="field">
-    <%= f.label :Agenda %><br />
+    <%= f.label :Agenda , "Agenda:"%>
     <%= f.text_field :Agenda %>
   </div>
-  <div class="field" style="height: 100px">
-    <%= f.label :Description %><br />
+
+  <div class="field" >
+    <%= f.label :Description, "Description:" %>
     <%= f.text_field :Description %>
   </div>
 
-<div class="field">
-  <%= label_tag(:Date, "Date:") %>
-  <%= text_field_tag :Date %>
+<div class="field" id="Date">
+  <%= f.label :time, "Date:" %>
+  <%= f.text_field :time %>
 </div>
 
 
 
   <div class="field">
-    <%= f.label :customers %><br />
+    <%= f.label :customers, "Customers:" %>
     <%= f.text_field :customers %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+<div>  <%= f.submit "Save", :class=> 'btn btn-primary' %></div>
+
+
+
 <% end %>

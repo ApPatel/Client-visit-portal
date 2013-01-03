@@ -1,29 +1,43 @@
-<h1>Listing visits</h1>
+<h2>Listing visits</h2>
 
-<table>
-  <tr>
-    <th>Agenda</th>
-    <th>Description</th>
-    <th>Time</th>
-    <th>Customers</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div style="height: 50px">
+  </div>
 
-<% @visits.each do |visit| %>
-  <tr>
-    <td><%= visit.Agenda %></td>
-    <td><%= visit.Description %></td>
-    <td><%= visit.time %></td>
-    <td><%= visit.customers %></td>
-    <td><%= link_to 'Show', visit %></td>
-    <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
-    <td><%= link_to 'Destroy', visit, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
 
+
+<div style="min-width: 960px; overflow:auto;">
+    <table  id="index_table" >
+      <thead>
+        <tr>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px"><b>Agenda </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><b>Description </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 100px "><b>Time </b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><b>Customers </b></td>
+        </tr>
+      </thead>
+      
+    <% @visits.each do |visit| %>
+        <tr>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px"><%= visit.Agenda %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><%= visit.Description %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 100px "><%= visit.time %></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 150px "><%= visit.customers %></td>
+
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px "><b><%= link_to 'Show', visit %></b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px "><b><%= link_to 'Edit', edit_visit_path(visit) %></b></td>
+          <td style=" padding-right: 5px; padding-left: 5px; min-width: 50px "><b><%= link_to 'Destroy', visit, confirm: 'Are you sure?', method: :delete %></b></td>
+        </tr>
+        <% end %>
+    </table>
+  </div>
+
+
+  <div style="height: 50px">
+  </div>
+
+<div class= 'btn btn-info'>
+<font size="3" color=#FFFFFF>
 <%= link_to 'New Visit', new_visit_path %>
+</font>
+</div>

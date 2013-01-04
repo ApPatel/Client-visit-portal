@@ -35,11 +35,9 @@ $(function() {
         changeMonth: true,
         changeYear: true,
         numberOfMonths: 1,
-        showAnim: 'slideDown',
-        dateFormat: $.datepicker.ISO_8601,
-        onSelect: function( selectedDate ) {
-            $( "#to1" ).datepicker( "option", "minDate", selectedDate );
-        }
+        showAnim: 'fold',
+        dateFormat: $.datepicker.ISO_8601
+        
     });
 
 })
